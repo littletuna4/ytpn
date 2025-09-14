@@ -30,7 +30,7 @@ const CustomHeading = ({
 };
 
 const CustomParagraph = ({ children }: { children: ReactNode }) => (
-  <p className="mb-4 text-gray-700 dark:text-gray-300 leading-relaxed">
+  <p className="mb-4 text-gray-700 dark:text-gray-300 leading-relaxed text-justify">
     {children}
   </p>
 );
@@ -56,7 +56,7 @@ const CustomCode = ({ children, className }: { children: ReactNode; className?: 
 };
 
 const CustomBlockquote = ({ children }: { children: ReactNode }) => (
-  <blockquote className="border-l-4 border-blue-500 pl-4 py-2 my-4 bg-blue-50 dark:bg-blue-900/20 text-gray-700 dark:text-gray-300 italic">
+  <blockquote className="border-l-4 border-blue-500 pl-4 py-2 my-4 bg-blue-50 dark:bg-blue-900/20 text-gray-700 dark:text-gray-300 italic text-justify">
     {children}
   </blockquote>
 );
@@ -64,8 +64,8 @@ const CustomBlockquote = ({ children }: { children: ReactNode }) => (
 const CustomList = ({ children, ordered }: { children: ReactNode; ordered?: boolean }) => {
   const ListTag = ordered ? 'ol' : 'ul';
   const classes = ordered 
-    ? "list-decimal list-inside mb-4 space-y-2 text-gray-700 dark:text-gray-300"
-    : "list-disc list-inside mb-4 space-y-2 text-gray-700 dark:text-gray-300";
+    ? "list-decimal list-inside mb-4 space-y-2 text-gray-700 dark:text-gray-300 text-justify"
+    : "list-disc list-inside mb-4 space-y-2 text-gray-700 dark:text-gray-300 text-justify";
   
   return <ListTag className={classes}>{children}</ListTag>;
 };
@@ -111,7 +111,7 @@ const CustomTableCell = ({ children, isHeader }: { children: ReactNode; isHeader
   const Tag = isHeader ? 'th' : 'td';
   const classes = isHeader
     ? "border border-gray-300 dark:border-gray-600 px-4 py-2 text-left font-semibold text-gray-900 dark:text-gray-100"
-    : "border border-gray-300 dark:border-gray-600 px-4 py-2 text-gray-700 dark:text-gray-300";
+    : "border border-gray-300 dark:border-gray-600 px-4 py-2 text-gray-700 dark:text-gray-300 text-justify";
   
   return <Tag className={classes}>{children}</Tag>;
 };
@@ -130,7 +130,7 @@ export const mdxComponents: MDXComponents = {
   blockquote: CustomBlockquote,
   ul: (props) => <CustomList {...props} />,
   ol: (props) => <CustomList ordered {...props} />,
-  li: ({ children }) => <li className="text-gray-700 dark:text-gray-300">{children}</li>,
+  li: ({ children }) => <li className="text-gray-700 dark:text-gray-300 text-justify">{children}</li>,
   a: CustomLink,
   table: CustomTable,
   thead: CustomTableHead,
@@ -140,11 +140,13 @@ export const mdxComponents: MDXComponents = {
   td: CustomTableCell,
   hr: () => <hr className="my-8 border-gray-300 dark:border-gray-600" />,
   img: ({ src, alt, ...props }) => (
-    <img 
-      src={src} 
-      alt={alt}
-      className="max-w-full h-auto rounded-lg shadow-sm mb-4"
-      {...props}
-    />
+    <div className="flex justify-center mb-4">
+      <img 
+        src={src} 
+        alt={alt}
+        className="max-w-full h-auto rounded-lg shadow-sm"
+        {...props}
+      />
+    </div>
   ),
 };

@@ -1,7 +1,7 @@
 'use client';
 
 import Link from 'next/link';
-
+import Image from 'next/image';
 export default function HeroSection() {
   return (
     <section className="min-h-screen bg-background flex items-center">
@@ -32,7 +32,14 @@ export default function HeroSection() {
           <div className="flex justify-center">
             <div className="w-full max-w-lg">
               <div className="bg-background-secondary rounded-lg p-8 aspect-square flex items-center justify-center border border-border">
-                <span className="text-foreground-muted text-lg">Hero Image Placeholder</span>
+                <Image
+                  src="/assets/images/hero.png"
+                  alt="Hero Image"
+                  width={500}
+                  height={500}
+                  priority  
+                  className="w-full h-full object-cover"
+                />
               </div>
             </div>
           </div>

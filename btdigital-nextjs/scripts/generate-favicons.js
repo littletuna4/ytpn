@@ -16,32 +16,18 @@ const faviconSizes = [
 ];
 
 async function generateFavicons() {
-  console.log("🎨 Generating favicons from logo...");
+    console.log("🎨 Generating favicons from PNG logo...");
 
   try {
-    // Read the logo SVG
-    const logoPath = path.join(__dirname, "../public/logo.svg");
-    const logoSvg = fs.readFileSync(logoPath, "utf8");
-
-    // Create a version with solid background for better favicon display
-    const faviconSvg = logoSvg
-      .replace('fill="none"', 'fill="hsl(220, 13%, 91%)"')
-      .replace('stroke="currentColor"', 'stroke="hsl(220, 9%, 46%)"')
-      .replace(/hsl\(var\(--[^)]+\)\)/g, (match) => {
-        // Replace CSS variables with actual colors for favicon
-        if (match.includes("--primary")) return "hsl(220, 9%, 46%)";
-        if (match.includes("--background")) return "hsl(220, 13%, 91%)";
-        if (match.includes("--accent")) return "hsl(142, 71%, 45%)";
-        if (match.includes("--success")) return "hsl(142, 71%, 45%)";
-        if (match.includes("--muted-foreground")) return "hsl(220, 9%, 46%)";
-        return "hsl(220, 9%, 46%)";
-      });
+    // Read the logo PNG
+    const logoPath = path.join(__dirname, "../public/logo.png");
+    const logoBuffer = fs.readFileSync(logoPath);
 
     // Generate all favicon sizes
     for (const { size, name } of faviconSizes) {
       const outputPath = path.join(__dirname, "../public", name);
 
-      await sharp(Buffer.from(faviconSvg))
+      await sharp(logoBuffer)
         .resize(size, size)
         .png()
         .toFile(outputPath);
@@ -51,7 +37,7 @@ async function generateFavicons() {
 
     // Generate ICO file (combining 16x16 and 32x32)
     const icoPath = path.join(__dirname, "../public/favicon.ico");
-    await sharp(Buffer.from(faviconSvg))
+    await sharp(logoBuffer)
       .resize(32, 32)
       .png()
       .toFile(icoPath.replace(".ico", "-temp.png"));
@@ -101,9 +87,9 @@ async function generateFavicons() {
 
     console.log("✅ Generated site.webmanifest");
 
-    // Copy the logo to public as icon.svg for modern browsers
-    // fs.copyFileSync(logoPath, path.join(__dirname, "../public/icon.svg"));
-    // console.log("✅ Generated icon.svg");
+    // Copy the logo to public as icon.png for modern browsers
+    // fs.copyFileSync(logoPath, path.join(__dirname, "../public/icon.png"));
+    // console.log("✅ Generated icon.png");
 
     // Move favicon.ico to app directory for Next.js 13+ app router
     // const appFaviconPath = path.join(__dirname, "../src/app/favicon.ico");
@@ -120,7 +106,7 @@ async function generateFavicons() {
     console.log("- android-chrome-192x192.png");
     console.log("- android-chrome-512x512.png");
     console.log("- site.webmanifest");
-    console.log("- icon.svg");
+    console.log("- icon.png");
   } catch (error) {
     console.error("❌ Error generating favicons:", error);
     process.exit(1);

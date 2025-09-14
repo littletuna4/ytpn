@@ -2,7 +2,9 @@
 
 import Image from 'next/image';
 import Link from 'next/link';
-import { SimpleThemeToggle } from './ui/SimpleThemeToggle';
+import { Mail } from 'lucide-react';
+import { SimpleThemeToggle } from '@/components/ui/SimpleThemeToggle';
+import { LinkedInIcon, FacebookIcon } from '@/components';
 
 export default function Footer() {
 
@@ -11,8 +13,14 @@ export default function Footer() {
       <div className="container mx-auto px-6">
         <div className="grid md:grid-cols-4 gap-8 mb-8">
           <div className="md:col-span-2">
-            <div className="flex items-center mb-4">
-              <div className="w-8 h-8 bg-primary rounded mr-3"></div>
+            <div className="flex items-center mb-4 gap-3">
+              <Image
+                src="/logo.png"
+                alt="B&T Digital"
+                width={20}
+                height={20}
+                priority
+              />
               <span className="text-xl font-bold text-foreground">B&T Digital</span>
             </div>
             <p className="text-foreground-secondary mb-4">
@@ -22,7 +30,7 @@ export default function Footer() {
               href="mailto:contact@btdigital.com.au" 
               className="flex items-center text-foreground-secondary hover:text-foreground transition-colors mb-4"
             >
-              <span className="mr-2">📧</span>
+              <Mail className="mr-2 h-4 w-4" />
               contact@btdigital.com.au
             </Link>
             <div className="flex space-x-4">
@@ -31,16 +39,26 @@ export default function Footer() {
                 target="_blank"
                 rel="noopener noreferrer"
                 className="text-foreground-secondary hover:text-foreground transition-colors"
+                aria-label="Visit our Facebook page"
               >
-                <span className="text-xl">📘</span>
+                <FacebookIcon 
+                  size={20}
+                  color="current"
+                  className="h-5 w-5"
+                />
               </Link>
               <Link
                 href="https://www.linkedin.com/company/bandt-consulting"
                 target="_blank"
                 rel="noopener noreferrer"
                 className="text-foreground-secondary hover:text-foreground transition-colors"
+                aria-label="Visit our LinkedIn page"
               >
-                <span className="text-xl">💼</span>
+                <LinkedInIcon 
+                  size={20}
+                  color="current"
+                  className="h-5 w-5"
+                />
               </Link>
             </div>
           </div>
@@ -69,32 +87,7 @@ export default function Footer() {
           </div>
           <div className="flex items-center space-x-6">
             <SimpleThemeToggle />
-            <div className="flex space-x-4">
-              <Link
-                href="https://twitter.com/madebyflowcraft"
-                target="_blank"
-                rel="noopener noreferrer"
-                className="text-foreground-secondary hover:text-foreground transition-colors"
-              >
-                <span className="text-xl">🐦</span>
-              </Link>
-              <Link
-                href="https://www.instagram.com/madebyflowcraft/"
-                target="_blank"
-                rel="noopener noreferrer"
-                className="text-foreground-secondary hover:text-foreground transition-colors"
-              >
-                <span className="text-xl">📷</span>
-              </Link>
-              <Link
-                href="https://gumroad.com/flowcraft"
-                target="_blank"
-                rel="noopener noreferrer"
-                className="text-foreground-secondary hover:text-foreground transition-colors"
-              >
-                <span className="text-xl">🛒</span>
-              </Link>
-            </div>
+            
           </div>
         </div>
       </div>

@@ -1,5 +1,14 @@
 'use client';
 
+/**
+ * FUNCTIONAL REQUIREMENTS:
+ * - Display process steps in equal-width grid layout
+ * - Ensure responsive design across all screen sizes
+ * - Maintain visual hierarchy with numbered circles
+ * - Center content and maintain consistent spacing
+ * - Support mobile-first responsive breakpoints
+ */
+
 const processSteps = [
   {
     title: 'Design',
@@ -24,23 +33,18 @@ export default function ProcessSection() {
             Our process
           </p>
         </div>
-        <div className="flex flex-col md:flex-row items-center justify-center gap-8 md:gap-16">
+        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8 lg:gap-12 max-w-6xl mx-auto">
           {processSteps.map((step, index) => (
-            <div key={step.title} className="flex flex-col items-center">
-              <div className="w-24 h-24 bg-primary rounded-full flex items-center justify-center mb-4">
+            <div key={step.title} className="flex flex-col items-center text-center">
+              <div className="w-24 h-24 bg-primary rounded-full flex items-center justify-center mb-6">
                 <span className="text-primary-foreground font-bold text-lg">{index + 1}</span>
               </div>
-              <h3 className="text-xl font-bold text-foreground mb-2">
+              <h3 className="text-xl font-bold text-foreground mb-3">
                 {step.title}
               </h3>
-              <p className="text-foreground-secondary text-center text-sm">
+              <p className="text-foreground-secondary text-sm leading-relaxed">
                 {step.description}
               </p>
-              {index < processSteps.length - 1 && (
-                <div className="hidden md:block absolute left-1/2 transform translate-x-8">
-                  <span className="text-2xl text-foreground-muted">→</span>
-                </div>
-              )}
             </div>
           ))}
         </div>

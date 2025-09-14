@@ -24,7 +24,7 @@ export default function BlogNotFoundPage() {
             Blog Post Not Found
           </h2>
           <p className="text-lg text-gray-600 dark:text-gray-400 mb-8 max-w-2xl mx-auto">
-            The blog post you're looking for doesn't exist or may have been moved. 
+            The blog post you&apos;re looking for doesn&apos;t exist or may have been moved. 
             Check out our latest blog posts below or return to our main site.
           </p>
           

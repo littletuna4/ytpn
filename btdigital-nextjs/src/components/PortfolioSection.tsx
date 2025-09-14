@@ -1,7 +1,7 @@
 'use client';
 
 import Link from 'next/link';
-
+import Image from 'next/image';
 const portfolioItems = [
   {
     title: 'Pro-Test Website',
@@ -34,7 +34,7 @@ export default function PortfolioSection() {
                 </div>
                 <p className="text-foreground-secondary mb-4">{item.description}</p>
                 <div className="h-48 bg-background-secondary rounded-lg flex items-center justify-center border border-border">
-                  <span className="text-foreground-muted">🌐 Portfolio Image</span>
+                  <span className="text-foreground-muted"><Image src="/assets/portfolio/pt-webflow.gif" alt="Portfolio Image" width={1000} height={1000} priority /></span>
                 </div>
               </Link>
             </div>

@@ -17,10 +17,11 @@
  * - Follow WCAG accessibility guidelines for contrast and navigation
  */
 
+import React from 'react';
 import Link from 'next/link';
 import Image from 'next/image';
 
-export default function MainApplicationNotFoundPage(): JSX.Element {
+export default function MainApplicationNotFoundPage(): React.JSX.Element {
   return (
     <div className="min-h-screen bg-background flex flex-col">
       {/* Main Content Area */}
@@ -40,8 +41,8 @@ export default function MainApplicationNotFoundPage(): JSX.Element {
               Page Not Found
             </h1>
             <p className="text-lg text-foreground-secondary mb-6 max-w-2xl mx-auto leading-relaxed">
-              The page you're looking for doesn't exist or may have been moved. 
-              Don't worry, we'll help you find what you need.
+              The page you&apos;re looking for doesn&apos;t exist or may have been moved. 
+              Don&apos;t worry, we&apos;ll help you find what you need.
             </p>
           </div>
 
@@ -123,7 +124,7 @@ export default function MainApplicationNotFoundPage(): JSX.Element {
           {/* Additional Help */}
           <div className="text-center">
             <p className="text-foreground-tertiary text-sm mb-4">
-              Still can't find what you're looking for?
+              Still can&apos;t find what you&apos;re looking for?
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center items-center">
               <Link 

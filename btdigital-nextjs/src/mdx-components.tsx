@@ -1,5 +1,5 @@
 import type { MDXComponents } from 'mdx/types';
-import { ReactNode } from 'react';
+import React, { ReactNode } from 'react';
 
 // Custom components for MDX
 const CustomHeading = ({ 
@@ -9,7 +9,7 @@ const CustomHeading = ({
   children: ReactNode; 
   level: number; 
 }) => {
-  const Tag = `h${level}` as keyof JSX.IntrinsicElements;
+  const Tag = `h${level}` as keyof React.JSX.IntrinsicElements;
   const baseClasses = "font-bold text-gray-900 dark:text-gray-100 mb-4 mt-8";
   
   const sizeClasses = {

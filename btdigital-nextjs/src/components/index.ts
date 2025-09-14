@@ -20,3 +20,8 @@ export { SimpleThemeToggle } from './ui/SimpleThemeToggle';
 // MDX components
 export { MDXProvider } from './mdx/MDXProvider';
 export { ClientMDXProvider } from './mdx/ClientMDXProvider';
+
+// Icon components
+export { Icon, type IconProps } from './icons/Icon';
+export { LinkedInIcon, type LinkedInIconProps } from './icons/LinkedInIcon';
+export { FacebookIcon, type FacebookIconProps } from './icons/FacebookIcon';
