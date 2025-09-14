@@ -11,7 +11,7 @@
 
 # next.js
 /.next/
-/out/
+# /out/
 
 # production
 /build
@@ -96,7 +96,7 @@ jspm_packages/
 
 # Next.js build output
 .next
-out
+# out
 
 # Nuxt.js build / generate output
 .nuxt
