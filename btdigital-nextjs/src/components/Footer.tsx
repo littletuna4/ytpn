@@ -24,7 +24,7 @@ export default function Footer() {
               <span className="text-xl font-bold text-foreground">B&T Digital</span>
             </div>
             <p className="text-foreground-secondary mb-4">
-              B&T is an Australian technology service provider.
+              B&T Digital is an Australian technology service provider.
             </p>
             <Link 
               href="mailto:contact@btdigital.com.au" 
