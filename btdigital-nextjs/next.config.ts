@@ -21,8 +21,8 @@ const nextConfig: NextConfig = {
     // Add any experimental features here if needed
   },
   
-  // Configure asset prefix if deploying to a subdirectory
-  // assetPrefix: process.env.NODE_ENV === 'production' ? '/your-repo-name' : '',
+  // // Configure asset prefix for GitHub Pages deployment
+  // assetPrefix: process.env.NODE_ENV === 'production' ? '/btdigital.com.au' : '',
   
   // Configure page extensions to include MDX files
   pageExtensions: ['js', 'jsx', 'md','mdx', 'ts', 'tsx'],
