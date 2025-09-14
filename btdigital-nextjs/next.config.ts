@@ -5,6 +5,9 @@ const nextConfig: NextConfig = {
   // Enable static export for static site hosting
   output: 'export',
   
+  // Configure custom output directory for static export
+  distDir: '../docs',
+  
   // Disable image optimization for static export
   images: {
     unoptimized: true,
