@@ -2,7 +2,7 @@
 
 import Image from 'next/image';
 import Link from 'next/link';
-import { SimpleThemeToggle } from './ui/SimpleThemeToggle';
+import { SimpleThemeToggle } from '@/components/ui/SimpleThemeToggle';
 
 export default function Header() {
   return (

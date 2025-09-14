@@ -1,7 +1,7 @@
 import "./globals.css";
 import type { Metadata } from "next";
 import {  Raleway } from "next/font/google";
-import { ThemeProvider } from "@/components/providers/ThemeProvider";
+import { ClientThemeProvider } from "@/components/providers/ClientThemeProvider";
 
 import Header from "@/components/Header";
 import Footer from "@/components/Footer";
@@ -38,11 +38,11 @@ export default function RootLayout({
       <body
         className={`${raleway.variable} antialiased`}
       >
-        <ThemeProvider defaultTheme="system">
+        <ClientThemeProvider defaultTheme="system">
           <Header />
           <main>{children}</main>
           <Footer />
-        </ThemeProvider>
+        </ClientThemeProvider>
       </body>
     </html>
     

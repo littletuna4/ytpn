@@ -13,5 +13,10 @@ export { default as CTASection } from './CTASection';
 
 // Theme components
 export { ThemeProvider, useTheme } from './providers/ThemeProvider';
+export { ClientThemeProvider } from './providers/ClientThemeProvider';
 export { ThemeToggle } from './ui/ThemeToggle';
 export { SimpleThemeToggle } from './ui/SimpleThemeToggle';
+
+// MDX components
+export { MDXProvider } from './mdx/MDXProvider';
+export { ClientMDXProvider } from './mdx/ClientMDXProvider';

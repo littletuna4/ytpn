@@ -1,17 +1,20 @@
 'use client';
 
 import Link from 'next/link';
+import Image from 'next/image';
 
 const teamMembers = [
   {
     name: 'Ben Israel',
     role: 'Cloud Engineering Specialist',
-    linkedin: 'https://www.linkedin.com/in/israelben/'
+    linkedin: 'https://www.linkedin.com/in/israelben/',
+    headshot: '/assets/headshots/ben-israel.png'
   },
   {
     name: 'Tony Cerqui',
     role: 'Process Engineering Specialist',
-    linkedin: 'https://www.linkedin.com/in/anthonycerqui/'
+    linkedin: 'https://www.linkedin.com/in/anthonycerqui/',
+    headshot: '/assets/headshots/anthony-cerqui.png'
   }
 ];
 
@@ -31,8 +34,14 @@ export default function TeamSection() {
               rel="noopener noreferrer"
               className="bg-card rounded-lg p-8 shadow-lg hover:shadow-xl transition-shadow text-center group border border-border"
             >
-              <div className="w-32 h-32 bg-background-secondary rounded-full mx-auto mb-6 flex items-center justify-center border border-border">
-                <span className="text-4xl">👤</span>
+              <div className="w-32 h-32 bg-background-secondary rounded-full mx-auto mb-6 flex items-center justify-center border border-border overflow-hidden">
+                <Image
+                  src={member.headshot}
+                  alt={`${member.name} headshot`}
+                  width={128}
+                  height={128}
+                  className="w-full h-full object-cover"
+                />
               </div>
               <h3 className="text-xl font-bold text-card-foreground mb-2 group-hover:text-primary transition-colors">
                 {member.name}

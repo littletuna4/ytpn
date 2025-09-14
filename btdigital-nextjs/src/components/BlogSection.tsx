@@ -35,10 +35,10 @@ const blogPosts = [
 
 export default function BlogSection() {
   return (
-    <section id="blog" className="py-20 bg-background">
+    <section id="blog" className="py-4 bg-background">
       <div className="container mx-auto px-6">
         <h2 className="text-3xl md:text-4xl font-bold text-center text-foreground mb-16">
-          Blog Space
+          Featured Blogs
         </h2>
         <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
           {blogPosts.map((post) => (

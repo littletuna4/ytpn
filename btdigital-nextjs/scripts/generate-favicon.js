@@ -73,13 +73,13 @@ async function generateFavicons() {
 
     // Generate site.webmanifest
     const manifest = {
-      name: "Sports Club Booking Center",
-      short_name: "SCBC",
-      description: "Sports Club Booking and Court Management System",
+      name: "B&T Digital",
+      short_name: "B&T Digital",
+      description: "B&T Digital is a technology service provider offering software engineering, data science and support services.",
       start_url: "/",
       display: "standalone",
-      theme_color: "#16a34a",
-      background_color: "#f8fafc",
+      theme_color: "#2563eb",
+      background_color: "#2563eb",
       icons: [
         {
           src: "/android-chrome-192x192.png",

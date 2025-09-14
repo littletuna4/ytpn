@@ -2,9 +2,29 @@
 
 import { useTheme } from "@/components/providers/ThemeProvider";
 import { Moon, Sun } from "lucide-react";
+import { useEffect, useState } from "react";
 
 export function SimpleThemeToggle() {
   const { theme, setTheme } = useTheme();
+  const [mounted, setMounted] = useState(false);
+
+  // Ensure component is mounted before rendering to prevent hydration mismatch
+  useEffect(() => {
+    setMounted(true);
+  }, []);
+
+  // Don't render until mounted to prevent hydration issues
+  if (!mounted) {
+    return (
+      <button
+        className="rounded-md p-2 hover:bg-background-secondary transition-colors"
+        aria-label="Theme toggle"
+        disabled
+      >
+        <Sun className="h-5 w-5 text-foreground" />
+      </button>
+    );
+  }
 
   const toggleTheme = () => {
     if (theme === "light") {
