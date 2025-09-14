@@ -1,42 +1,35 @@
-'use client';
+"use client";
 
-import { useTheme } from '@/components/providers/ThemeProvider';
+import { useTheme } from "@/components/providers/ThemeProvider";
+import { Moon, Sun } from "lucide-react";
 
 export function SimpleThemeToggle() {
-  const { theme, setTheme, resolvedTheme } = useTheme();
+  const { theme, setTheme } = useTheme();
 
-  const cycleTheme = () => {
-    if (theme === 'light') {
-      setTheme('dark');
-    } else if (theme === 'dark') {
-      setTheme('system');
+  const toggleTheme = () => {
+    if (theme === "light") {
+      setTheme("dark");
+    } else if (theme === "dark") {
+      setTheme("system");
     } else {
-      setTheme('light');
+      setTheme("light");
     }
-  };
-
-  const getIcon = () => {
-    if (theme === 'system') {
-      return '💻';
-    }
-    return resolvedTheme === 'dark' ? '🌙' : '☀️';
-  };
-
-  const getLabel = () => {
-    if (theme === 'system') {
-      return 'System';
-    }
-    return resolvedTheme === 'dark' ? 'Dark' : 'Light';
   };
 
   return (
     <button
-      onClick={cycleTheme}
-      className="flex items-center space-x-2 px-3 py-2 rounded-md text-sm font-medium transition-colors text-foreground-secondary hover:text-foreground hover:bg-background-secondary"
-      aria-label={`Switch to ${theme === 'light' ? 'dark' : theme === 'dark' ? 'system' : 'light'} mode`}
+      onClick={toggleTheme}
+      className="rounded-md p-2 hover:bg-background-secondary transition-colors"
+      aria-label={`Switch to ${theme === "light" ? "dark" : theme === "dark" ? "system" : "light"} mode`}
+      data-oid="_5ikfpw"
     >
-      <span className="text-lg">{getIcon()}</span>
-      <span>{getLabel()}</span>
+      {theme === "light" ? (
+        <Moon className="h-5 w-5 text-foreground" data-oid="1fys5sh" />
+      ) : theme === "dark" ? (
+        <Sun className="h-5 w-5 text-foreground" data-oid="9lzhkv-" />
+      ) : (
+        <Sun className="h-5 w-5 text-foreground" data-oid="mis3jh." />
+      )}
     </button>
   );
 }

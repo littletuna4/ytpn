@@ -1,10 +1,10 @@
-import type { Metadata } from "next";
-import { Geist, Geist_Mono, Raleway } from "next/font/google";
 import "./globals.css";
-import Header from "@/components/Header";
-import Footer from "@/components/Footer";
+import type { Metadata } from "next";
+import {  Raleway } from "next/font/google";
 import { ThemeProvider } from "@/components/providers/ThemeProvider";
 
+import Header from "@/components/Header";
+import Footer from "@/components/Footer";
 
 
 const raleway = Raleway({
@@ -18,6 +18,16 @@ export const metadata: Metadata = {
   description: "B&T Digital is a technology service provider offering software engineering, data science and support services.",
 };
 
+export const viewport = {
+  width: "device-width",
+  initialScale: 1,
+  maximumScale: 1,
+  themeColor: [
+    { media: "(prefers-color-scheme: light)", color: "#f8fafc" },
+    { media: "(prefers-color-scheme: dark)", color: "#0f172a" },
+  ],
+};
+
 export default function RootLayout({
   children,
 }: Readonly<{
@@ -28,12 +38,13 @@ export default function RootLayout({
       <body
         className={`${raleway.variable} antialiased`}
       >
-        <ThemeProvider defaultTheme="system" storageKey="btdigital-theme">
+        <ThemeProvider defaultTheme="system">
           <Header />
           <main>{children}</main>
           <Footer />
         </ThemeProvider>
       </body>
     </html>
+    
   );
 }
