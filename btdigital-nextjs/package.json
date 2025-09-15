@@ -10,7 +10,7 @@
     "lint": "eslint",
     "lint:fix": "eslint --fix",
     "type-check": "tsc --noEmit",
-    "clean": "rm -rf .next ../docs",
+    "clean": "rm -rf .next out ../docs",
     "preview": "npx serve ../docs",
     "generate-favicons": "node scripts/generate-favicons.js"
   },

@@ -150,3 +150,6 @@ export function useMDXComponents(components: MDXComponents): MDXComponents {
     ...components,
   };
 }
+
+// Also export as default for compatibility
+export default useMDXComponents;

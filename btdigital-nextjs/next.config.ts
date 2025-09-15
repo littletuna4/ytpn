@@ -6,7 +6,7 @@ const nextConfig: NextConfig = {
   output: 'export',
   
   // Configure custom output directory for static export
-  distDir: '../docs',
+  distDir: process.env.NODE_ENV === 'production' ? '../docs' : 'out',
   
   // Disable image optimization for static export
   images: {
@@ -35,6 +35,11 @@ const nextConfig: NextConfig = {
   // Disable TypeScript type checking during build for static export
   typescript: {
     ignoreBuildErrors: true,
+  },
+  
+  // Ensure proper static export behavior
+  generateBuildId: async () => {
+    return 'build-' + Date.now();
   },
 };
 

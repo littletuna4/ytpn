@@ -1,13 +1,21 @@
 'use client';
 
+import Image from 'next/image';
+
 export default function AboutSection() {
   return (
     <section className="py-20 bg-background">
       <div className="container mx-auto px-6">
         <div className="grid lg:grid-cols-2 gap-12 items-center">
           <div className="order-2 lg:order-1">
-            <div className="bg-background-secondary rounded-lg p-8 aspect-video flex items-center justify-center border border-border">
-              <span className="text-foreground-muted text-lg">About Image Placeholder</span>
+            <div className="bg-background-secondary rounded-lg p-8 aspect-video flex items-center justify-center border border-border overflow-hidden">
+              <Image
+                src="/assets/images/team.png"
+                alt="Our Team"
+                width={500}
+                height={281}
+                className="w-full h-full object-cover rounded-lg"
+              />
             </div>
           </div>
           <div className="order-1 lg:order-2 space-y-6">

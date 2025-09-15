@@ -17,9 +17,7 @@ export { ClientThemeProvider } from './providers/ClientThemeProvider';
 export { ThemeToggle } from './ui/ThemeToggle';
 export { SimpleThemeToggle } from './ui/SimpleThemeToggle';
 
-// MDX components
-export { MDXProvider } from './mdx/MDXProvider';
-export { ClientMDXProvider } from './mdx/ClientMDXProvider';
+// MDX components are now handled by @next/mdx automatically via mdx-components.tsx
 
 // Icon components
 export { Icon, type IconProps } from './icons/Icon';
