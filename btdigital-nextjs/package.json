@@ -5,7 +5,7 @@
   "scripts": {
     "dev": "next dev --turbopack",
     "build": "next build --turbopack",
-    "build:static": "next build && touch ../docs/.nojekyll",
+    "build:static": "next build --turbopack && node scripts/deploy-files.js",
     "start": "next start",
     "lint": "eslint",
     "lint:fix": "eslint --fix",
