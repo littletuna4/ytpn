@@ -1,7 +1,7 @@
 {
-  "name": "B&T Digital",
-  "short_name": "B&T Digital",
-  "description": "B&T Digital is a technology service provider offering software engineering, data science and support services.",
+  "name": "YTPN",
+  "short_name": "YTPN",
+  "description": "YTPN is a technology service provider offering software engineering, data science and support services.",
   "start_url": "/",
   "display": "standalone",
   "theme_color": "#2563eb",
