@@ -3,51 +3,46 @@
 import Link from 'next/link';
 import Image from 'next/image';
 
-const teamMembers = [
+const sponsors = [
   {
-    name: 'Ben Israel',
-    role: 'Cloud Engineering Specialist',
-    linkedin: 'https://www.linkedin.com/in/israelben/',
-    headshot: '/assets/headshots/ben-israel.png'
+    name: 'B&T Digital',
+    role: 'Technology Partner',
+    link: 'https://www.btdigital.com.au/',
+    headshot: '/assets/sponsors/btdigital.png'
   },
-  {
-    name: 'Tony Cerqui',
-    role: 'Process Engineering Specialist',
-    linkedin: 'https://www.linkedin.com/in/anthonycerqui/',
-    headshot: '/assets/headshots/anthony-cerqui.png'
-  }
+  
 ];
 
-export default function TeamSection() {
+export default function SponsorSection() {
   return (
     <section id="team" className="py-20 bg-background-secondary">
       <div className="container mx-auto px-6">
         <h2 className="text-3xl md:text-4xl font-bold text-center text-foreground mb-16">
-          Our Team
+          Our Partners
         </h2>
-        <div className="grid md:grid-cols-2 gap-8 max-w-4xl mx-auto">
-          {teamMembers.map((member) => (
+        <div className={`grid md:grid-cols-${sponsors.length} gap-8 max-w-4xl mx-auto`}>
+          {sponsors.map((sponsor) => (
             <Link
-              key={member.name}
-              href={member.linkedin}
+              key={sponsor.name}
+              href={sponsor.link}
               target="_blank"
               rel="noopener noreferrer"
-              className="bg-card rounded-lg p-8 shadow-lg hover:shadow-xl transition-shadow text-center group border border-border"
+              className="bg-card rounded-lg p-8 shadow-lg hover:shadow-xl transition-shadow text-center group border border-border max-w-100 w-full mx-auto"
             >
               <div className="w-32 h-32 bg-background-secondary rounded-full mx-auto mb-6 flex items-center justify-center border border-border overflow-hidden">
                 <Image
-                  src={member.headshot}
-                  alt={`${member.name} headshot`}
+                  src={sponsor.headshot}
+                  alt={`${sponsor.name} logo`}
                   width={128}
                   height={128}
                   className="w-full h-full object-cover"
                 />
               </div>
               <h3 className="text-xl font-bold text-card-foreground mb-2 group-hover:text-primary transition-colors">
-                {member.name}
+                {sponsor.name}
               </h3>
               <p className="text-foreground-secondary">
-                {member.role}
+                {sponsor.role}
               </p>
             </Link>
           ))}

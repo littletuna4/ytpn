@@ -3,13 +3,11 @@ import {
   HeroSection,
   ServicesSection,
   AboutSection,
-  TeamSection,
+  SponsorSection,
   BlogSection,
   ProcessSection,
   FocusAreasSection,
-  PortfolioSection,
   ClientsSection,
-  CTASection
 } from '@/components';
 
 export default function Home() {
@@ -18,13 +16,12 @@ export default function Home() {
       <HeroSection />
       <ServicesSection />
       <AboutSection />
-      <TeamSection />
+      <SponsorSection />
       <BlogSection />
       <ProcessSection />
       <FocusAreasSection />
-      <PortfolioSection />
       <ClientsSection />
-      <CTASection />
+
     </div>
   );
 }

@@ -12,20 +12,26 @@ export default function HeroSection() {
               Young Technical Professionals Network
             </h1>
             <p className="text-xl text-foreground-secondary leading-relaxed">
-              We are a network of young technical professionals who are passionate about technical problems and want to make a difference in the world.
+              We are a network of thinkers and builders who are passionate about technical problems and want to solve them together.
             </p>
             <div className="flex flex-col sm:flex-row gap-4">
               <Link 
-                href="/join" 
-                className="bg-primary hover:bg-primary/90 text-primary-foreground px-8 py-4 rounded-lg font-semibold transition-colors text-center"
-              >
-                Contact
-              </Link>
-              <Link 
-                href="#process" 
+                href="/events" 
                 className="text-primary hover:text-primary/80 px-8 py-4 font-semibold transition-colors text-center"
               >
-                See our Process
+                Events
+              </Link>
+              <Link 
+                href="/reps" 
+                className="text-primary hover:text-primary/80 px-8 py-4 font-semibold transition-colors text-center"
+              >
+                Reps
+              </Link>
+              <Link 
+                href="/sponsors" 
+                className="bg-primary hover:bg-primary/90 text-primary-foreground px-8 py-4 rounded-lg font-semibold transition-colors text-center"
+              >
+                Sponsors
               </Link>
             </div>
           </div>
