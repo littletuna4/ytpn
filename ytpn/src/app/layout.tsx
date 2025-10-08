@@ -28,6 +28,14 @@ export const viewport = {
   ],
 };
 
+export const metadata: Metadata = {
+  title: "YTPN",
+  description: "YTPN is a technology service provider offering software engineering, data science and support services.",
+  other: {
+    "color-scheme": "light dark",
+  },
+};
+
 export default function RootLayout({
   children,
 }: Readonly<{
@@ -35,6 +43,32 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en" suppressHydrationWarning>
+      <head>
+        <script
+          dangerouslySetInnerHTML={{
+            __html: `
+              (function() {
+                try {
+                  const theme = localStorage.getItem('theme') || 'system';
+                  const isDark = theme === 'dark' || 
+                    (theme === 'system' && window.matchMedia('(prefers-color-scheme: dark)').matches);
+                  
+                  if (isDark) {
+                    document.documentElement.classList.add('dark');
+                  } else {
+                    document.documentElement.classList.remove('dark');
+                  }
+                } catch (e) {
+                  // Fallback to system preference if localStorage fails
+                  if (window.matchMedia('(prefers-color-scheme: dark)').matches) {
+                    document.documentElement.classList.add('dark');
+                  }
+                }
+              })();
+            `,
+          }}
+        />
+      </head>
       <body
         className={`${raleway.variable} antialiased`}
       >

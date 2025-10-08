@@ -841,9 +841,26 @@
     --muted-foreground: 240 4% 74%;
   }
 
-  html, body {
+  html {
     background-color: hsl(var(--background));
-    color: hsl(var(--foreground));
+    color: #0f172a;
+    background-color: #fff;
+  }
+
+  html.dark {
+    color: #f8fafc;
+    background-color: #0f172a;
+  }
+
+  body {
+    background-color: hsl(var(--background));
+    color: #0f172a;
+    background-color: #fff;
+  }
+
+  .dark body {
+    color: #f8fafc;
+    background-color: #0f172a;
   }
 
   * {

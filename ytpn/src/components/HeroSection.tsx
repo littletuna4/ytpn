@@ -9,14 +9,14 @@ export default function HeroSection() {
         <div className="grid lg:grid-cols-2 gap-12 items-center">
           <div className="space-y-8">
             <h1 className="text-4xl md:text-6xl font-bold text-foreground leading-tight">
-              Put Your Technology and Data First
+              Young Technical Professionals Network
             </h1>
             <p className="text-xl text-foreground-secondary leading-relaxed">
-              Let us help take care of your technology and data processes so that you can save time, make informed decisions and improve your business.
+              We are a network of young technical professionals who are passionate about technical problems and want to make a difference in the world.
             </p>
             <div className="flex flex-col sm:flex-row gap-4">
               <Link 
-                href="tel:+61487631858" 
+                href="/join" 
                 className="bg-primary hover:bg-primary/90 text-primary-foreground px-8 py-4 rounded-lg font-semibold transition-colors text-center"
               >
                 Contact

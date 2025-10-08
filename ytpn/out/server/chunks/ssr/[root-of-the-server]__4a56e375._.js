@@ -36,7 +36,10 @@ function ThemeProvider({ children, defaultTheme = "system" }) {
         ].includes(savedTheme)) {
             initialTheme = savedTheme;
         }
-        // Set initial resolved theme based on current DOM state
+        // Check current DOM state to determine resolved theme
+        const root = window.document.documentElement;
+        const isCurrentlyDark = root.classList.contains("dark");
+        // Set initial resolved theme based on current DOM state or system preference
         if (initialTheme === "system") {
             const systemTheme = window.matchMedia("(prefers-color-scheme: dark)").matches ? "dark" : "light";
             setResolvedTheme(systemTheme);
@@ -95,7 +98,7 @@ function ThemeProvider({ children, defaultTheme = "system" }) {
         children: children
     }, void 0, false, {
         fileName: "[project]/src/components/providers/ThemeProvider.tsx",
-        lineNumber: 101,
+        lineNumber: 105,
         columnNumber: 5
     }, this);
 }
@@ -384,7 +387,7 @@ function HeroSection() {
                         children: [
                             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f2e$pnpm$2f$next$40$15$2e$5$2e$3_react$2d$dom$40$19$2e$1$2e$0_react$40$19$2e$1$2e$0_$5f$react$40$19$2e$1$2e$0$2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("h1", {
                                 className: "text-4xl md:text-6xl font-bold text-foreground leading-tight",
-                                children: "Put Your Technology and Data First"
+                                children: "Young Technical Professionals Network"
                             }, void 0, false, {
                                 fileName: "[project]/src/components/HeroSection.tsx",
                                 lineNumber: 11,
@@ -392,7 +395,7 @@ function HeroSection() {
                             }, this),
                             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f2e$pnpm$2f$next$40$15$2e$5$2e$3_react$2d$dom$40$19$2e$1$2e$0_react$40$19$2e$1$2e$0_$5f$react$40$19$2e$1$2e$0$2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("p", {
                                 className: "text-xl text-foreground-secondary leading-relaxed",
-                                children: "Let us help take care of your technology and data processes so that you can save time, make informed decisions and improve your business."
+                                children: "We are a network of young technical professionals who are passionate about technical problems and want to make a difference in the world."
                             }, void 0, false, {
                                 fileName: "[project]/src/components/HeroSection.tsx",
                                 lineNumber: 14,
@@ -402,7 +405,7 @@ function HeroSection() {
                                 className: "flex flex-col sm:flex-row gap-4",
                                 children: [
                                     /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f2e$pnpm$2f$next$40$15$2e$5$2e$3_react$2d$dom$40$19$2e$1$2e$0_react$40$19$2e$1$2e$0_$5f$react$40$19$2e$1$2e$0$2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f2e$pnpm$2f$next$40$15$2e$5$2e$3_react$2d$dom$40$19$2e$1$2e$0_react$40$19$2e$1$2e$0_$5f$react$40$19$2e$1$2e$0$2f$node_modules$2f$next$2f$dist$2f$client$2f$app$2d$dir$2f$link$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["default"], {
-                                        href: "tel:+61487631858",
+                                        href: "/join",
                                         className: "bg-primary hover:bg-primary/90 text-primary-foreground px-8 py-4 rounded-lg font-semibold transition-colors text-center",
                                         children: "Contact"
                                     }, void 0, false, {

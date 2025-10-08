@@ -33,7 +33,11 @@ export function ThemeProvider({
       initialTheme = savedTheme;
     }
 
-    // Set initial resolved theme based on current DOM state
+    // Check current DOM state to determine resolved theme
+    const root = window.document.documentElement;
+    const isCurrentlyDark = root.classList.contains("dark");
+    
+    // Set initial resolved theme based on current DOM state or system preference
     if (initialTheme === "system") {
       const systemTheme = window.matchMedia("(prefers-color-scheme: dark)")
         .matches
