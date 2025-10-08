@@ -16,6 +16,9 @@ const raleway = Raleway({
 export const metadata: Metadata = {
   title: "YTPN",
   description: "YTPN is a technology service provider offering software engineering, data science and support services.",
+  other: {
+    "color-scheme": "light dark",
+  },
 };
 
 export const viewport = {
@@ -26,14 +29,6 @@ export const viewport = {
     { media: "(prefers-color-scheme: light)", color: "#f8fafc" },
     { media: "(prefers-color-scheme: dark)", color: "#0f172a" },
   ],
-};
-
-export const metadata: Metadata = {
-  title: "YTPN",
-  description: "YTPN is a technology service provider offering software engineering, data science and support services.",
-  other: {
-    "color-scheme": "light dark",
-  },
 };
 
 export default function RootLayout({
