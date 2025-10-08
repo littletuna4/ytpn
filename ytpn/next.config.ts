@@ -5,6 +5,9 @@ const nextConfig: NextConfig = {
   // Enable static export for static site hosting
   output: 'export',
   
+  // Configure base path for hosting at domain.com/ytpn
+  basePath: '/ytpn',
+  
   // Configure custom output directory for static export
   distDir: process.env.NODE_ENV === 'production' ? '../docs' : 'out',
   
@@ -22,7 +25,7 @@ const nextConfig: NextConfig = {
   },
   
   // // Configure asset prefix for GitHub Pages deployment
-  // assetPrefix: process.env.NODE_ENV === 'production' ? '/btdigital.com.au' : '',
+  assetPrefix: process.env.NODE_ENV === 'production' ? '/ytpn' : '',
   
   // Configure page extensions to include MDX files
   pageExtensions: ['js', 'jsx', 'md','mdx', 'ts', 'tsx'],
