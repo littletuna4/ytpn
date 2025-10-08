@@ -9,7 +9,7 @@ const nextConfig: NextConfig = {
   basePath: '/ytpn',
   
   // Configure custom output directory for static export
-  distDir: process.env.NODE_ENV === 'production' ? '../docs' : 'out',
+  distDir: process.env.NODE_ENV === 'production' ? '../docs' : 'out', // docs is what github pages allows
   
   // Disable image optimization for static export
   images: {
