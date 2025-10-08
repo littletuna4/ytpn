@@ -15,7 +15,7 @@ export default function Footer() {
           <div className="md:col-span-2">
             <div className="flex items-center mb-4 gap-3">
               <Image
-                src="/logo.png"
+                src="logo.png"
                 alt="YTPN"
                 width={20}
                 height={20}

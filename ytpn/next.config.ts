@@ -8,6 +8,9 @@ const nextConfig: NextConfig = {
   // Configure base path for hosting at domain.com/ytpn
   basePath: '/ytpn',
   
+  // // Configure asset prefix for GitHub Pages deployment
+  assetPrefix: process.env.NODE_ENV === 'production' ? '/ytpn' : '',
+  
   // Configure custom output directory for static export
   distDir: process.env.NODE_ENV === 'production' ? '../docs' : 'out', // docs is what github pages allows
   
@@ -23,9 +26,6 @@ const nextConfig: NextConfig = {
   experimental: {
     // Add any experimental features here if needed
   },
-  
-  // // Configure asset prefix for GitHub Pages deployment
-  assetPrefix: process.env.NODE_ENV === 'production' ? '/ytpn' : '',
   
   // Configure page extensions to include MDX files
   pageExtensions: ['js', 'jsx', 'md','mdx', 'ts', 'tsx'],

@@ -10,7 +10,7 @@ export default function AboutSection() {
           <div className="order-2 lg:order-1">
             <div className="bg-background-secondary rounded-lg p-8 aspect-video flex items-center justify-center border border-border overflow-hidden">
               <Image
-                src="/assets/images/team.png"
+                src="assets/images/team.png"
                 alt="Our Team"
                 width={500}
                 height={281}

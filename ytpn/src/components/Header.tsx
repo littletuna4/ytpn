@@ -13,7 +13,7 @@ export default function Header() {
           <div className="flex items-center">
             <Link href="/" className="flex items-center gap-3 text-2xl font-bold">
               <Image
-                src="/logo.png"
+                src="logo.png"
                 alt="YTPN"
                 width={220}
                 height={60}

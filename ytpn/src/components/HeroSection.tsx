@@ -39,7 +39,7 @@ export default function HeroSection() {
             <div className="w-full max-w-lg">
               <div className="bg-background-secondary rounded-lg p-8 aspect-square flex items-center justify-center border border-border">
                 <Image
-                  src="/assets/images/hero.png"
+                  src="assets/images/hero.png"
                   alt="Hero Image"
                   width={500}
                   height={500}
