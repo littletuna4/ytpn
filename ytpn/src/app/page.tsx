@@ -6,6 +6,7 @@ import {
   SponsorSection,
   BlogSection,
   ProcessSection,
+  RegisterInterestSection,
   FocusAreasSection,
   ClientsSection,
 } from '@/components';
@@ -21,6 +22,7 @@ export default function Home() {
       <ProcessSection />
       <FocusAreasSection />
       <ClientsSection />
+      <RegisterInterestSection />
 
     </div>
   );

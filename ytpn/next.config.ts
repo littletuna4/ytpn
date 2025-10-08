@@ -9,7 +9,7 @@ const nextConfig: NextConfig = {
   basePath: '/ytpn',
   
   // // Configure asset prefix for GitHub Pages deployment
-  assetPrefix: process.env.NODE_ENV === 'production' ? '/ytpn' : '',
+  assetPrefix: process.env.NODE_ENV === 'production' ? '/ytpn' : '/ytpn',
   
   // Configure custom output directory for static export
   distDir: process.env.NODE_ENV === 'production' ? '../docs' : 'out', // docs is what github pages allows

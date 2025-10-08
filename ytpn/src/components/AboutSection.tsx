@@ -23,10 +23,10 @@ export default function AboutSection() {
               What we are
             </p>
             <h2 className="text-3xl md:text-4xl font-bold text-foreground">
-              A technological partner for Growing Businesses
+              A network of thinkers and builders
             </h2>
             <p className="text-lg text-foreground-secondary leading-relaxed">
-              We specialise in helping small to medium technical businesses build and manage their technology and digital processes, such that reporting, operating and decision making is easier.
+              A nexus for events, networking and collaboration.
             </p>
           </div>
         </div>
